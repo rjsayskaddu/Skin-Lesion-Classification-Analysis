@@ -28,7 +28,7 @@ with VGG19, InceptionV3, InceptionResNetV2, ResNet50, Xception nets.
 * from keras.applications.inception_resnet_v2 import InceptionResNetV2
 * from keras.applications.xception import Xception
 
-##Innovation & novelty?
+## Innovation & novelty?
 - The older deep learning approach basically uses two different networks to
 individually perform lesion segmentation and classification, but we are using multiscale fully-convolutional residual networks.
 - Using ADAM optimizer to reduce memory usage and improve computational
