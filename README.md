@@ -27,3 +27,19 @@ with VGG19, InceptionV3, InceptionResNetV2, ResNet50, Xception nets.
 * from keras.applications.mobilenet import MobileNet
 * from keras.applications.inception_resnet_v2 import InceptionResNetV2
 * from keras.applications.xception import Xception
+
+##Innovation & novelty?
+- The older deep learning approach basically uses two different networks to
+individually perform lesion segmentation and classification, but we are using multiscale fully-convolutional residual networks.
+- Using ADAM optimizer to reduce memory usage and improve computational
+efficiency
+- Using the general features as a starting point to evolve new features, we also obtained
+better classification accuracy which helped with the discrimination between malignant
+and benign skin lesions.
+- To keep the advantage of the faster computation time with a high LR, we decreased
+the LR dynamically every 3 epochs depending on the validation accuracy. With the
+‘ReduceLROnPlateau’, we choose to reduce the LR by half if the accuracy is not
+improved after 3 epochs. 
+- We decreased LR for every 3 epochs to achieve a global minimum which
+isn’t possible if we reduce LR with every epoch. We didn’t use 5 epochs
+since it was too time taking. 
